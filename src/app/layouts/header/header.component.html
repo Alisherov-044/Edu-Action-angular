@@ -1,0 +1,27 @@
+<header class="header">
+  <div class="container">
+    <nav class="navbar">
+      <div class="navbar__content">
+        <app-logo />
+        <ul class="navbar__links">
+          <a
+            *ngFor="let navbarLink of navbarLinks"
+            [routerLink]="navbarLink.url"
+            class="navbar__link"
+            >{{ navbarLink.text }}</a
+          >
+        </ul>
+      </div>
+      <div class="navbar__actions">
+        <app-button class="primary">Ariza qoldirish</app-button>
+        <app-select [options]="languages" />
+        <app-burger-menu (click)="toggleMenu()" [isOpen]="isMenuOpen" />
+      </div>
+    </nav>
+    <app-navbar-mobile
+      [isOpen]="isMenuOpen"
+      [navbarLinks]="navbarLinks"
+      [languages]="languages"
+    />
+  </div>
+</header>

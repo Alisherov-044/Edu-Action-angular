@@ -1,0 +1,40 @@
+.navbar-mobile {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    padding: 12px 24px;
+    background-color: #fff;
+    border-block: 1px solid rgba($color: #8D8C8B, $alpha: .5);
+    transform: translateY(-30px);
+    transition: all .2s ease;
+    opacity: 0;
+    z-index: -1;
+
+    &.open {
+        transform: translate(0);
+        opacity: 1;
+        z-index: 10;
+    }
+
+    .navbar { 
+        &__links {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        &__link {
+            font-size: 16px;
+            font-weight: 600;
+            color: #8D8C8B;
+            transition: all .2s ease;
+
+            &.active,
+            &:first-child,
+            &:hover {
+                color: #1C1917;
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+<div [class]="'navbar-mobile ' + (isOpen ? 'open' : '')">
+  <ul class="navbar__links">
+    <a
+      *ngFor="let navbarLink of navbarLinks"
+      [routerLink]="navbarLink.url"
+      class="navbar__link"
+      >{{ navbarLink.text }}</a
+    >
+  </ul>
+</div>

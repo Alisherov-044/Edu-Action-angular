@@ -1,0 +1,8 @@
+<div class="select__wrapper">
+  <select [name]="name || ''" [id]="id || ''">
+    <option *ngFor="let option of options" [value]="option.value">
+      {{ option.text }}
+    </option>
+  </select>
+  <div class="arrow-icon"></div>
+</div>

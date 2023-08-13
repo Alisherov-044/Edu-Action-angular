@@ -1,0 +1,39 @@
+<footer class="footer">
+  <div class="container">
+    <app-logo />
+    <div class="social-networks">
+      <h4 class="title">Ijtimoiy tarmoqlarimiz</h4>
+      <ul class="social__icons">
+        <a
+          *ngFor="let socialNetwork of socialNetworks"
+          [href]="socialNetwork.url"
+        >
+          <img [src]="socialNetwork.icon" [alt]="socialNetwork.url" />
+        </a>
+      </ul>
+    </div>
+    <div class="contact">
+      <div class="phone-number contact-item">
+        <img src="/assets/phone.svg" alt="phone icon" />
+        <h4 class="text">{{ phoneNumber }}</h4>
+      </div>
+      <div class="website contact-item">
+        <img src="/assets/at.svg" alt="at icon" />
+        <h4 class="text">{{ website }}</h4>
+      </div>
+    </div>
+    <div class="location">
+      <div class="text">
+        {{ location }}
+      </div>
+      <button class="map__button">
+        <img src="/assets/location.svg" alt="location icon" />
+        <span class="map__button--text">Xaritada</span>
+      </button>
+    </div>
+    <div class="author">
+      <img src="/assets/author-logo.svg" alt="author logo" />
+      <span class="text">Developed and designed by Appx Group</span>
+    </div>
+  </div>
+</footer>

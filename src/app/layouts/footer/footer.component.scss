@@ -1,0 +1,107 @@
+.footer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-block: 40px;
+    min-height: 256px;
+    background-color: #F9F8F6;
+
+    .container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+        
+        @media screen and (max-width: 600px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+    }
+
+    .social-networks {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    
+        .title {
+            font-size: 16px;
+            line-height: 30px;
+            font-weight: 400;
+            color: #000;
+        }
+    }
+
+    .social__icons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        &-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .text {
+            font-size: 16px;
+            line-height: 30px;
+            font-weight: 400;
+            color: #000;
+        }
+    }
+
+    .location {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+
+        .text {
+            max-width: 210px;
+            font-size: 16px;
+            line-height: 30px;
+            font-weight: 400;
+            color: #000;
+        }
+
+        .map__button {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 16px;
+            font-weight: 400;
+            color: #1C1917;
+            padding: 12px 24px;
+            border-radius: 16px;
+            background-color: #fff;
+        }
+
+        @media screen and (max-width: 1050px) {
+            display: none;
+        }
+    }
+
+    .author {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 24px;
+        border-radius: 16px;
+        background-color: #fff;
+
+        .text {
+            max-width: 153px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 400;
+            color: #000;
+        }
+    }
+}
