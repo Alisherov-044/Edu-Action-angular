@@ -3,7 +3,7 @@ import {
   LanguageInterface,
   NavbarLinkInterface,
   SocialNetworkInterface,
-} from "./types";
+} from "./layouts.types";
 
 @Injectable({
   providedIn: "root",

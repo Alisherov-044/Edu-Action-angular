@@ -1,5 +1,5 @@
 import { Component, inject } from "@angular/core";
-import { SocialNetworkInterface } from "src/app/layouts/types";
+import { SocialNetworkInterface } from "src/app/layouts/layouts.types";
 import { LayoutsService } from "src/app/layouts/layouts.service";
 
 @Component({
@@ -8,12 +8,13 @@ import { LayoutsService } from "src/app/layouts/layouts.service";
   styleUrls: ["./footer.component.scss"],
 })
 export class FooterComponent {
+  layoutsService: LayoutsService = inject(LayoutsService);
   socialNetworks: SocialNetworkInterface[] = [];
   phoneNumber: string = "+998 95 145 86 86";
   website: string = "info@edu-action.com";
   location: string = "Toshkent shahri, Chilanzor Yakkabog' ko'chasi 25-uy";
 
   constructor() {
-    this.socialNetworks = inject(LayoutsService).getSocialNetworks();
+    this.socialNetworks = this.layoutsService.getSocialNetworks();
   }
 }

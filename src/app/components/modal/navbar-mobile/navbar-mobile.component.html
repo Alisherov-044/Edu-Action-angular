@@ -1,4 +1,9 @@
-<div [class]="'navbar-mobile ' + (isOpen ? 'open' : '')">
+<div
+  class="navbar-mobile"
+  [ngClass]="{
+    open: isOpen
+  }"
+>
   <ul class="navbar__links">
     <a
       *ngFor="let navbarLink of navbarLinks"

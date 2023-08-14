@@ -1,5 +1,8 @@
 import { Component, inject } from "@angular/core";
-import { LanguageInterface, NavbarLinkInterface } from "src/app/layouts/types";
+import {
+  LanguageInterface,
+  NavbarLinkInterface,
+} from "src/app/layouts/layouts.types";
 import { LayoutsService } from "src/app/layouts/layouts.service";
 
 @Component({
@@ -8,13 +11,14 @@ import { LayoutsService } from "src/app/layouts/layouts.service";
   styleUrls: ["./header.component.scss"],
 })
 export class HeaderComponent {
+  layoutsService: LayoutsService = inject(LayoutsService);
   navbarLinks: NavbarLinkInterface[] = [];
   languages: LanguageInterface[] = [];
   isMenuOpen: boolean = false;
 
   constructor() {
-    this.navbarLinks = inject(LayoutsService).getNavbarLinks();
-    this.languages = inject(LayoutsService).getLanguages();
+    this.navbarLinks = this.layoutsService.getNavbarLinks();
+    this.languages = this.layoutsService.getLanguages();
   }
 
   toggleMenu() {

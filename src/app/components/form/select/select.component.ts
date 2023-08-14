@@ -1,5 +1,5 @@
 import { Component, Input } from "@angular/core";
-import { SelectInterface } from "src/app/components/types";
+import { SelectInterface } from "src/app/components/components.types";
 
 @Component({
   selector: "app-select",

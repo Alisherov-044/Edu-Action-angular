@@ -1,4 +1,4 @@
-import { SelectInterface } from "../components/types";
+import { SelectInterface } from "src/app/components/components.types";
 
 export interface NavbarLinkInterface {
   id?: number;

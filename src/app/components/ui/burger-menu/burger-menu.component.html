@@ -1,4 +1,9 @@
-<button [class]="'burger-menu ' + (isOpen ? 'open' : '')">
+<button
+  class="burger-menu"
+  [ngClass]="{
+    open: isOpen
+  }"
+>
   <div class="line line-one"></div>
   <div class="line line-two"></div>
   <div class="line line-three"></div>
